@@ -14,6 +14,9 @@ Updated: 2026-11-20 (session 1)
 
 ## In progress
 
+- FareSplitter contract (opt-in fee splitting: immutable, ≤10% cap, CREATE2 factory, anyone-can-flush) — 10/10 foundry tests pass incl. fuzz; deploy script ready; deploys to Base Sepolia when settler has gas, mainnet at launch. Operators opt in by setting --pay-to to their splitter address; OSS default stays feeless.
+- SepETH: 0.9 mined (user's session), unclaimed — waiting for claim to settler, then bridge script runs.
+
 - Higgsfield launch video drafts: 2× 4s/480p concepts (farebox coin-drop; robot queue paying fares) — drafts cost 4 credits each; account has 10 credits, so final-quality renders need a credit top-up (user's account).
 
 - Landing site (agent, `site/`).
