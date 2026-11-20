@@ -1,6 +1,6 @@
 # Farebox — Launch Status
 
-Updated: 2026-11-20 (session 1, testnet track COMPLETE)
+Updated: 2026-11-20 (session 1 — MAINNET PROVEN; launch mechanics remain)
 
 **Definition of done:** real paid request on Base mainnet through farebox's own flow, verified end to end; site, brand, and launch content live.
 
@@ -18,15 +18,17 @@ Updated: 2026-11-20 (session 1, testnet track COMPLETE)
 - **Public demo live:** https://farebox-demo.vercel.app (402 on /api/fortune) — paid over the public internet by a real x402 client, settlement tx 0xc76a3bfc… success.
 - Bridged 0.05 SepETH → Base Sepolia settler (first attempt reverted at 200k gas; estimate+30% buffer = 664k worked — recorded as engineering note).
 
+- **MAINNET PROVEN (real money, 2026-11-20):** the live public demo (farebox-demo.vercel.app, eip155:8453, payTo = Robert's revenue wallet) was paid twice with real USDC by an x402 client over the public internet. Revenue wallet 0 → 0.01 USDC; buyer 1 → 0.99. Second settlement tx: 0x4243e2160765d086062042c5a97a8ee7ad5b3c9482f112644ee6c91ec7cf9385 (Base, success). Settled by our own settler (self-settlement); gas used so far ~0.00003 ETH.
+- **FareSplitterFactory on Base mainnet:** 0xA7512a6dda2e6F429760a5cfA1C82AC741A6A138.
+
 ## In progress
 
 - (nothing — all unblocked work done)
 
 ## Blocked on user (mainnet + launch)
 
-1. ~$5 ETH on Base mainnet → settler 0xeE7Ed7DE5BeD1320b188DAc5188479bD034Ec10a (settlement gas).
-2. ~$1 USDC on Base mainnet → buyer 0xc390b2f6FD2670C86F21CE4828aE1b203DcE22aA (mainnet proving payments).
-3. At launch: farebox.dev purchase; X account + sign-in; GitHub publish OK; optional npm login; Vercel protection-off OK; Higgsfield credit top-up for final videos.
+1. ~~ETH/USDC funding~~ ✓ received and spent as intended.
+2. At launch: farebox.dev purchase; X account + sign-in; GitHub publish OK; optional npm login; Vercel protection-off OK; Higgsfield credit top-up for final videos.
 
 ## Not started
 
