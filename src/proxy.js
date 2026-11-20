@@ -1,4 +1,5 @@
 import express from "express";
+import { parseUnits } from "viem";
 import { createProxyMiddleware } from "http-proxy-middleware";
 import { paymentMiddleware, x402ResourceServer } from "@x402/express";
 import { ExactEvmScheme } from "@x402/evm/exact/server";
@@ -21,8 +22,25 @@ import { createSelfFacilitator } from "./selfFacilitator.js";
  */
 export function createFarebox(opts) {
   const network = resolveNetwork(opts.network);
-  const price = `$${Number(opts.price)}`;
   const patterns = opts.routes?.length ? opts.routes : ["*"];
+
+  // Networks with a built-in default asset (Base USDC) take a Money price.
+  // Networks with an explicit asset (e.g. USDG on Robinhood Chain) need a
+  // structured AssetAmount with the token's EIP-712 domain.
+  let price;
+  let priceLabel;
+  if (network.asset) {
+    const amount = parseUnits(String(opts.price), network.asset.decimals).toString();
+    price = {
+      asset: network.asset.address,
+      amount,
+      extra: { ...network.asset.eip712 },
+    };
+    priceLabel = `$${Number(opts.price)} in ${network.asset.symbol}`;
+  } else {
+    price = `$${Number(opts.price)}`;
+    priceLabel = `${price} (USDC)`;
+  }
 
   let facilitatorClient;
   let facilitatorUrl;
@@ -30,7 +48,7 @@ export function createFarebox(opts) {
     const self = createSelfFacilitator({
       privateKey: opts.settlerKey,
       caip2: network.caip2,
-      rpcUrl: opts.rpcUrl,
+      rpcUrl: opts.rpcUrl || network.rpcUrl,
     });
     facilitatorClient = self;
     facilitatorUrl = `self-settled by ${self.settlerAddress}`;
@@ -60,7 +78,7 @@ export function createFarebox(opts) {
         },
       ],
       description:
-        opts.description || `Paid access via Farebox (${price}/request)`,
+        opts.description || `Paid access via Farebox (${priceLabel}/request)`,
     };
   }
 
@@ -73,7 +91,7 @@ export function createFarebox(opts) {
       ok: true,
       target: opts.target,
       network: network.caip2,
-      price,
+      price: priceLabel,
       payTo: opts.payTo,
       facilitator: facilitatorUrl,
     });
@@ -89,5 +107,5 @@ export function createFarebox(opts) {
     })
   );
 
-  return { app, network, facilitatorUrl, price };
+  return { app, network, facilitatorUrl, price: priceLabel };
 }
