@@ -38,7 +38,7 @@ Updated: 2026-11-20 (session 1 — LAUNCHED: site live at farebox.dev, repo publ
 
 ## Remaining
 
-- npm publish `farebox@0.1.0` (ready, 5.9kB dry-run OK) — needs `npm login` by Robert on this Mac.
+- ~~npm publish~~ ✓ **farebox@0.1.0 live on npm** (published by Robert with 2FA, 2026-11-20). `npx farebox --version` verified from cold install.
 - X: Robert creates @fareboxdev + signs into browser pane; thread ready (update post for RH Chain first before posting).
 - Final-quality Higgsfield renders (needs credits).
 
