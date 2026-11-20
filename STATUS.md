@@ -21,7 +21,7 @@ Updated: 2026-11-20 (session 1)
 ## Blocked on user (batched ask sent)
 
 1. Turnstile click for PoW faucet (testnet gas) — or 0.01 Base Sepolia ETH to settler.
-2. Operator revenue wallet address (mainnet).
+2. ~~Operator revenue wallet address (mainnet)~~ ✓ received 2026-11-20: `0x6F49F13Ed3ecf70480f3E42126231fb7EEdC439f`
 3. ~$5 ETH on Base mainnet to settler wallet 0xeE7Ed7DE5BeD1320b188DAc5188479bD034Ec10a (at mainnet step).
 4. Mainnet proving payment (~$0.05 USDC) — via PayBox approval or $1 USDC to buyer wallet.
 5. At launch: farebox.dev purchase, X account creation + sign-in, GitHub publish approval, optional npm publish.
