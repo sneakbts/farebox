@@ -210,7 +210,7 @@ footer .brand{font-size:.95rem}
 <header class="hero wrap">
   <span class="pill">open source &middot; MIT &middot; built on the x402 standard</span>
   <h1>Put a <span class="fare">fare</span> on anything.</h1>
-  <p class="sub">Farebox is a <strong>one-command x402 paywall proxy</strong>. Drop it in front of any HTTP API or MCP server and agents pay you <strong>USDC on Base</strong>, per request, straight to your own wallet.</p>
+  <p class="sub">Farebox is a <strong>one-command x402 paywall proxy</strong>. Drop it in front of any HTTP API or MCP server and agents pay you <strong>USDC on Base</strong> &mdash; or USDG on Robinhood Chain &mdash; per request, straight to your own wallet.</p>
 
   <div class="cmdbox">
     <div class="cmdbox-bar">
@@ -433,6 +433,10 @@ console.<span class="c-fn">log</span>(<span class="c-kw">await</span> res.<span 
       <details>
         <summary>What does it cost?</summary>
         <div class="a">Farebox itself is free and open source (MIT). The only cost is sub-cent Base gas, and only in self-settle mode, paid from your own gas wallet.</div>
+      </details>
+      <details>
+        <summary>Which chains?</summary>
+        <div class="a">USDC on Base (and Base Sepolia for testing), plus USDG on <strong>Robinhood Chain</strong> &mdash; where no public x402 facilitator exists, so Farebox's self-settlement is the only way to run x402 there. The first x402 payment on Robinhood Chain was a Farebox fare. More EVM chains are straightforward to add; the 402 response can offer several networks at once.</div>
       </details>
       <details>
         <summary>Does it work with MCP servers?</summary>
