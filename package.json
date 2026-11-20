@@ -31,5 +31,18 @@
   },
   "bin": {
     "farebox": "bin/farebox.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneakbts/farebox.git"
+  },
+  "homepage": "https://farebox.dev",
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
   }
 }

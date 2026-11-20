@@ -1,6 +1,6 @@
 # Farebox — Launch Status
 
-Updated: 2026-11-20 (session 1 — MAINNET PROVEN; launch mechanics remain)
+Updated: 2026-11-20 (session 1 — LAUNCHED: site live at farebox.dev, repo public; npm + X remain)
 
 **Definition of done:** real paid request on Base mainnet through farebox's own flow, verified end to end; site, brand, and launch content live.
 
@@ -31,7 +31,16 @@ Updated: 2026-11-20 (session 1 — MAINNET PROVEN; launch mechanics remain)
 1. ~~ETH/USDC funding~~ ✓ received and spent as intended.
 2. At launch: farebox.dev purchase; X account + sign-in; GitHub publish OK; optional npm login; Vercel protection-off OK; Higgsfield credit top-up for final videos.
 
-## Not started (all launch mechanics, all need user items above)
+## Launched 2026-11-20
+
+- **https://farebox.dev LIVE** (+ www; demo at https://demo.farebox.dev and farebox-demo.vercel.app, Base mainnet).
+- **GitHub public: https://github.com/sneakbts/farebox** (main, full history).
+
+## Remaining
+
+- npm publish `farebox@0.1.0` (ready, 5.9kB dry-run OK) — needs `npm login` by Robert on this Mac.
+- X: Robert creates @fareboxdev + signs into browser pane; thread ready (update post for RH Chain first before posting).
+- Final-quality Higgsfield renders (needs credits).
 
 - farebox.dev DNS + production site cutover (site is deployed, SSO-gated, project "site").
 - GitHub repo publish; npm publish.
