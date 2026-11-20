@@ -21,7 +21,7 @@ Open source, MIT. Here's how it works.
 
 Farebox is a proxy that speaks x402, the open standard for HTTP-native payments.
 
-Unpaid request comes in → it answers 402 with payment terms. The client signs a USDC transfer on Base and retries. Payment verifies, request passes through to your server.
+Unpaid request → HTTP 402 with payment terms. Client signs a USDC transfer on Base, retries, payment verifies, request passes through to your server.
 
 That's the whole product.
 
@@ -41,7 +41,7 @@ Agents pay with standard x402 clients like @x402/fetch. Buyers just sign a USDC 
 
 ## Post 4
 
-Some context on why this exists now.
+Context on why now.
 
 Cloudflare just announced its Monetization Gateway — an x402 stablecoin paywall for things behind Cloudflare — plus custodial agent Wallets. AWS shipped x402 support in CloudFront.
 
@@ -51,11 +51,11 @@ The standard is real. The biggest infra companies are building on it.
 
 ## Post 5
 
-Credit where due: Cloudflare and AWS validated the market. x402 is clearly how agents will pay for APIs.
+They validated the market. x402 is how agents will pay for APIs.
 
-But the Cloudflare gateway is waitlist-only, the wallets are custodial, and it only fronts things behind Cloudflare.
+But Cloudflare's gateway is waitlist-only, its wallets custodial, and it only fronts things behind Cloudflare.
 
-Farebox is the permissionless version. Usable today, in front of anything, keys stay yours.
+Farebox is the permissionless version: in front of anything, self-custodial, usable today.
 
 ---
 
@@ -71,9 +71,9 @@ The facilitator's gas wallet was empty. The "free" facilitator was broke.
 
 So we made Farebox settle its own payments.
 
-Pass --settler-key and Farebox broadcasts the USDC transfer itself, from your own wallet, for sub-cent gas on Base.
+Pass --settler-key and it broadcasts the USDC transfer itself from your own sub-cent-gas wallet on Base.
 
-No third-party facilitator. No API key. No account. No waitlist. Nothing between your buyer's signature and your wallet.
+No third-party facilitator. No API key. No account. No waitlist. Nothing sits between the buyer's signature and your wallet.
 
 ---
 

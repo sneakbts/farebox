@@ -21,7 +21,7 @@ If taken, in order of preference:
 
 > Put a fare on anything. One command turns any API or MCP server into a USDC-per-request paywall on Base (x402). Self-custodial. No facilitator. MIT.
 
-(149 characters)
+(150 characters)
 
 Alternate, slightly drier:
 
