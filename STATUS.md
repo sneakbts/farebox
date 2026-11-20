@@ -1,6 +1,6 @@
 # Farebox — Launch Status
 
-Updated: 2026-11-20 (session 1)
+Updated: 2026-11-20 (session 1, testnet track COMPLETE)
 
 **Definition of done:** real paid request on Base mainnet through farebox's own flow, verified end to end; site, brand, and launch content live.
 
@@ -12,24 +12,21 @@ Updated: 2026-11-20 (session 1)
 - Self-settlement mode (`--settler-key`) implemented and boots; settles pending gas in settler wallet.
 - Buyer test wallet funded: 20 USDC on Base Sepolia (Circle faucet) → 0xc390b2f6FD2670C86F21CE4828aE1b203DcE22aA.
 
+- **TESTNET E2E COMPLETE (self-settled):** buyer paid $0.005 via @x402/fetch, farebox verified + broadcast settlement itself from the settler wallet. Tx 0xc4d8979f… (Base Sepolia, success). Buyer 20→19.995 USDC, operator 0→0.005. Gas per settlement ≈ 0.0000006 ETH.
+- **FareSplitterFactory deployed** to Base Sepolia: 0x4989BAA77CF9FF313c8FE9e8ab79f4035C796E99 (deploy tx by settler). Splitter created at 0xDe35C5B8Fe6533cdE7f47AB51A6760a284D0Fc3D (demo operator / revenue wallet / 300 bps).
+- **Live fee split verified on-chain:** $0.10 fare → split tx 0xeedfb992… → operator +0.097, revenue wallet +0.003 (exactly 3%).
+- **Public demo live:** https://farebox-demo.vercel.app (402 on /api/fortune) — paid over the public internet by a real x402 client, settlement tx 0xc76a3bfc… success.
+- Bridged 0.05 SepETH → Base Sepolia settler (first attempt reverted at 200k gas; estimate+30% buffer = 664k worked — recorded as engineering note).
+
 ## In progress
 
-- FareSplitter contract (opt-in fee splitting: immutable, ≤10% cap, CREATE2 factory, anyone-can-flush) — 10/10 foundry tests pass incl. fuzz; deploy script ready; deploys to Base Sepolia when settler has gas, mainnet at launch. Operators opt in by setting --pay-to to their splitter address; OSS default stays feeless.
-- SepETH: 0.9 mined (user's session), unclaimed — waiting for claim to settler, then bridge script runs.
+- (nothing — all unblocked work done)
 
-- Higgsfield launch video drafts: 2× 4s/480p concepts (farebox coin-drop; robot queue paying fares) — drafts cost 4 credits each; account has 10 credits, so final-quality renders need a credit top-up (user's account).
+## Blocked on user (mainnet + launch)
 
-- Landing site (agent, `site/`).
-- X launch content (agent, `launch/`).
-- Testnet settler gas: pk910 PoW faucet blocked on a Cloudflare Turnstile **(user click needed)**; after mining Sepolia ETH → bridge to Base Sepolia via L1StandardBridge.
-
-## Blocked on user (batched ask sent)
-
-1. Turnstile click for PoW faucet (testnet gas) — or 0.01 Base Sepolia ETH to settler.
-2. ~~Operator revenue wallet address (mainnet)~~ ✓ received 2026-11-20: `0x6F49F13Ed3ecf70480f3E42126231fb7EEdC439f`
-3. ~$5 ETH on Base mainnet to settler wallet 0xeE7Ed7DE5BeD1320b188DAc5188479bD034Ec10a (at mainnet step).
-4. Mainnet proving payment (~$0.05 USDC) — via PayBox approval or $1 USDC to buyer wallet.
-5. At launch: farebox.dev purchase, X account creation + sign-in, GitHub publish approval, optional npm publish.
+1. ~$5 ETH on Base mainnet → settler 0xeE7Ed7DE5BeD1320b188DAc5188479bD034Ec10a (settlement gas).
+2. ~$1 USDC on Base mainnet → buyer 0xc390b2f6FD2670C86F21CE4828aE1b203DcE22aA (mainnet proving payments).
+3. At launch: farebox.dev purchase; X account + sign-in; GitHub publish OK; optional npm login; Vercel protection-off OK; Higgsfield credit top-up for final videos.
 
 ## Not started
 
