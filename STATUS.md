@@ -30,12 +30,11 @@ Updated: 2026-11-20 (session 1 — MAINNET PROVEN; launch mechanics remain)
 1. ~~ETH/USDC funding~~ ✓ received and spent as intended.
 2. At launch: farebox.dev purchase; X account + sign-in; GitHub publish OK; optional npm login; Vercel protection-off OK; Higgsfield credit top-up for final videos.
 
-## Not started
+## Not started (all launch mechanics, all need user items above)
 
-- Mainnet E2E proving transaction (needs items 1–2 above).
-- Mainnet FareSplitterFactory deploy (same gas wallet).
 - farebox.dev DNS + production site cutover (site is deployed, SSO-gated, project "site").
 - GitHub repo publish; npm publish.
+- X account content posting.
 - Final-quality Higgsfield renders (needs credits).
 
 ## Decisions log
