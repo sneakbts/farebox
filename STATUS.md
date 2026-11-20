@@ -14,6 +14,8 @@ Updated: 2026-11-20 (session 1)
 
 ## In progress
 
+- Higgsfield launch video drafts: 2× 4s/480p concepts (farebox coin-drop; robot queue paying fares) — drafts cost 4 credits each; account has 10 credits, so final-quality renders need a credit top-up (user's account).
+
 - Landing site (agent, `site/`).
 - X launch content (agent, `launch/`).
 - Testnet settler gas: pk910 PoW faucet blocked on a Cloudflare Turnstile **(user click needed)**; after mining Sepolia ETH → bridge to Base Sepolia via L1StandardBridge.
