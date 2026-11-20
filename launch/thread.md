@@ -1,4 +1,4 @@
-# Farebox — Launch Thread (10 posts)
+# Farebox — Launch Thread (11 posts)
 
 Voice: builder. Concrete, a little dry, confident. No rocket emojis, no "excited to announce."
 All posts under 280 chars unless noted. Media placeholders marked inline.
@@ -89,6 +89,16 @@ What Farebox doesn't do also matters:
 
 ## Post 9
 
+Proof self-settlement matters: Robinhood Chain has no x402 facilitator. Not Coinbase's, not anyone's. So farebox settled its own.
+
+Earlier today: the first x402 payment on Robinhood Chain. A real USDG fare, settled on-chain.
+
+https://robinhoodchain.blockscout.com/tx/0xe38f289cc7eebde6afffc8e0438bf941b7895590066d739dbbe7706acb93b13f
+
+---
+
+## Post 10
+
 Things you can put a fare on this afternoon:
 
 - an MCP server, so agents pay per tool call
@@ -100,7 +110,7 @@ If it speaks HTTP, it can charge.
 
 ---
 
-## Post 10
+## Post 11
 
 Put a fare on anything.
 
@@ -117,6 +127,7 @@ npx farebox --target http://localhost:8080 --pay-to 0xYourWallet --price 0.005
 
 ## Posting notes
 
+- Post 9 (Robinhood Chain first) is the quote-tweet bait; expect it to travel on its own.
 - Post 1 gets pinned (or use the standalone pin in profile.md).
 - Attach the terminal GIF to post 3 even if it also goes on the pin — it's the proof.
 - "@x402/fetch" in post 3 is an npm package name, not an X mention; X will not link it, which is fine.
