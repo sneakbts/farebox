@@ -30,10 +30,11 @@ Updated: 2026-11-20 (session 1, testnet track COMPLETE)
 
 ## Not started
 
-- Mainnet E2E proving transaction (needs 2–4).
-- Vercel deploy of site; DNS.
+- Mainnet E2E proving transaction (needs items 1–2 above).
+- Mainnet FareSplitterFactory deploy (same gas wallet).
+- farebox.dev DNS + production site cutover (site is deployed, SSO-gated, project "site").
 - GitHub repo publish; npm publish.
-- Hosted live demo endpoint (plan: fortune API behind farebox, on Vercel or Windows server).
+- Final-quality Higgsfield renders (needs credits).
 
 ## Decisions log
 
